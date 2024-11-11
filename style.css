@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+padding: 0;
+box-sizing: border-box;}
+#hover_box{
+    background-color: rgb(11, 11, 12);
+    height: 100vh;
+    
+    
+    
+    
+}
+#hover_box .container{
+    width: 1500px;
+    
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow-x: hidden;
+
+}
+#hover_box .hover_box{
+    width:380px;
+    height: 300px;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+
+
+}
+#hover_box .hover_box img{
+    width: 100%;
+    height: 100%;
+}
+#hover_box .hover_box::after{
+    content:"" ;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: rgb(99, 83, 55);
+    opacity: 0;
+    top: 0%;
+    z-index: 10;
+    left: 0%;
+    right: 100%;
+    visibility: hidden;
+    
+
+
+}
+#hover_box .hover_box:hover::after{
+    width: 100%;
+    opacity: 0.9;
+    transition: 2s;
+    visibility: visible;
+    right: 0;
+}
+#hover_box .icon{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 55;
+    transform: translate(-50% -50%);
+}
+#hover_box .icon span{
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+     border-radius: 50%;
+}
+#hover_box .icon span:hover{
+
+    background: rgb(190, 171, 111);
+    color: #fff;
+
+transition: 0.3s;
+} 
+#hover_box .icon span:first-child{
+    transform:translateX(-100%);
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+#hover_box .icon span i:hover {
+    transform: rotate(360deg);
+    transition: 0.5s;
+    
+}
+#hover_box .icon span:last-child{
+    transform: translateX(100%);
+    transition: o.5s;
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0.3s;
+}
+#hover_box .hover_box:hover .icon span:first-child{
+    transform: translateX(0%) rotate(360deg);
+    transition: 0.5s;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+#hover_box .hover_box:hover .icon span:last-child{
+    transform: translateX(0%) rotate(360deg);
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+
